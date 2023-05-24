@@ -89,4 +89,11 @@ window.addEventListener("scroll", function () {
     deliveryBoy.style.transform = `translateX(${deliveryBoyMove}px)`;
   }
 
+  function bookTable() {
+
+
+        window.location.href = "booking.html";  // Replace "booking.html" with the actual URL of your booking page
+       // return "booking page add successfully";
+       }
+
 });
