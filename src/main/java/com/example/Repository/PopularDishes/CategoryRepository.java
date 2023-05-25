@@ -1,12 +1,11 @@
-package com.example.Repository;
+package com.example.Repository.PopularDishes;
 
-import com.example.Entity.FoodCategory;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import com.example.Entity.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
 @Repository
 @EnableJpaRepositories
-public interface FoodCategoryRepository extends JpaRepository<FoodCategory, Long> {
+public interface CategoryRepository extends JpaRepository<Category, Long> {
 }

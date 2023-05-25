@@ -1,0 +1,26 @@
+
+
+mysql -u root -p    //open database connection -
+USE food;                   //use database
+
+
+///////////////  insert data into table   ###data_entity###    /////////////////
+INSERT INTO food_entity (image_path, description, title, icon)
+VALUES ('/assets/images/promo-4.png', 'Food is any substance consumed to provide nutritional support for an organism3.', 'Burger King', 'icon4');
+
+
+//////////////    insert data into table   ###food_category_entity###   ////////////
+INSERT INTO food_category_entity (name, type)
+VALUES ('pizza', 'type1');
+
+
+///////////// drop table column ///////////
+ALTER TABLE food_category_entity
+DROP COLUMN column_name;
+DROP TABLE food_entity;
+
+
+///////////////   change table name ////////
+RENAME TABLE food_category_entity TO PopularDishes;
+
+
