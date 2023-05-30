@@ -7,13 +7,14 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class Category {
+public class FoodCategoryEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String categoryName;
 
-    public Category(int id) {
-        this.id = (long) id;
-    }
+    @Column(unique = true, nullable = false)
+    private String name;
 }
