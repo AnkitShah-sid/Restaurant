@@ -1,6 +1,5 @@
 package com.example.Entity;
 
-import com.example.Entity.FoodEntity;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -12,6 +11,6 @@ public class PopularDishes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "food_id") // Name of the foreign key column in the FoodEntity table
+    @JoinColumn(name = "food_id")
     private FoodEntity food;
 }

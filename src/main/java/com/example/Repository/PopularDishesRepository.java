@@ -1,11 +1,12 @@
-package com.example.Repository.PopularDishes;
+package com.example.Repository;
 
-import com.example.Entity.Category;
+
+import com.example.Entity.PopularDishes;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
 @Repository
 @EnableJpaRepositories
-public interface CategoryRepository extends JpaRepository<Category, Long> {
+public interface PopularDishesRepository extends JpaRepository<PopularDishes, Long> {
 }

@@ -1,7 +1,7 @@
 package com.example.Controller;
 
 import com.example.Entity.Category;
-import com.example.Repository.PopularDishes.CategoryRepository;
+import com.example.Repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -51,6 +51,7 @@ public class CategoryController {
         Optional<Category> category = categoryRepository.findById(id);
         if (category.isPresent()) {
             categoryRepository.delete(category.get());
+
             return ResponseEntity.ok().build();
         }
         return ResponseEntity.notFound().build();

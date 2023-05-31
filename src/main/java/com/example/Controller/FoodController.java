@@ -6,7 +6,6 @@ import com.example.Repository.FoodRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -25,10 +24,7 @@ public class FoodController {
     @GetMapping("/{id}")
     public ResponseEntity<FoodEntity> getFoodEntityById(@PathVariable Long id) {
         Optional<FoodEntity> foodEntity = foodEntityRepository.findById(id);
-        if (foodEntity.isPresent()) {
-            return ResponseEntity.ok(foodEntity.get());
-        }
-        return ResponseEntity.notFound().build();
+        return foodEntity.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping
