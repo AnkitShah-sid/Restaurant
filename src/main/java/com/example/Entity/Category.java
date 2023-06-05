@@ -12,6 +12,8 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String categoryName;
+    private String imagePath;
+    private String description;
 
     public Category(int id) {
         this.id = (long) id;

@@ -18,9 +18,12 @@ VALUES ('pizza', 'type1');
 ALTER TABLE food_category_entity
 DROP COLUMN column_name;
 DROP TABLE food_entity;
+DROP TABLE category;
 
 
 ///////////////   change table name ////////
 RENAME TABLE food_category_entity TO PopularDishes;
 
-
+///////////////////   drop table after ///////////
+ALTER TABLE food_entity
+DROP CONSTRAINT FKh0syjl7dae01luyx314cxal6t;

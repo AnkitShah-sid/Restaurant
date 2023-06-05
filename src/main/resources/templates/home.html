@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodie - Supper delicious Burger in town!</title>
+    <title>Restorent - Unmatched Service in this Area!</title>
 
     <!--
       - favicon
@@ -47,7 +47,7 @@
         <h1>
             <a href="#" class="logo">Foodie<span class="span">.</span></a>
         </h1>
-        <span th:text="${categories}"></span></p>
+
         <nav class="navbar" data-navbar>
             <ul class="navbar-list">
 
@@ -153,11 +153,11 @@
 
 
         <section class="section section-divider white promo">
-            <div class="container">
+            <div class="container" >
                 <ul class="promo-list has-scrollbar">
                     <li class="promo-item" th:each="category : ${categories}">
-                        <div class="promo-card" th:each="category : ${categories}">
-                            <div class="card-icon">
+                        <div class="promo-card">
+                            <div class="card-icon" >
                                 <!-- Add your category-specific icon logic here -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"
                                      xmlns:v="https://vecta.io/nano">
@@ -172,11 +172,11 @@
                                 </svg>
                             </div>
                             <h3 class="h3 card-title" th:text="${category.categoryName}"></h3>
-                            <p class="card-text">
-                                Food is any substance consumed to provide nutritional support for an organism.
+                            <p class="card-text" th:text="${category.description}" >
+                               <!-- Food is any substance consumed to provide nutritional support for an organism.-->
                             </p>
                             <!-- Add your category-specific image logic here -->
-                            <img th:src="@{/assets/images/promo-1.png}" width="300" height="300" loading="lazy" alt="Category Image" class="w-100 card-banner">
+                            <img th:src="${category.imagePath}" width="300" height="300" loading="lazy" alt="Category Image" class="w-100 card-banner">
                         </div>
                     </li>
                 </ul>
